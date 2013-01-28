@@ -4,12 +4,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.1.4
+Version:	2.1.6
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	b07604b47984878fce1f9219575afc12
+# Source0-md5:	0b237327ca05c91952d1db50e151229b
 URL:		http://pear.symfony.com/package/Validator/
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
