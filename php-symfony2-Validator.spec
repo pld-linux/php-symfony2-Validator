@@ -3,21 +3,34 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.3.4
+Version:	2.4.3
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	f70ef6131089912796b980c15e654d56
-URL:		http://pear.symfony.com/package/Validator/
+# Source0-md5:	f29cc8980bdb3d2ea3a309f633353cb6
+URL:		http://symfony.com/doc/2.4/book/validation.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
+Requires:	php(ctype)
+Requires:	php(date)
+Requires:	php(filter)
+Requires:	php(mbstring)
+Requires:	php(pcre)
+Requires:	php(simplexml)
+Requires:	php(spl)
 Requires:	php-channel(pear.symfony.com)
 Requires:	php-pear >= 4:1.3.10
+Requires:	php-symfony2-PropertyAccess >= 2.2
+Requires:	php-symfony2-Translation >= 2.0
+#Suggests:	php-doctrine-Annotations
+#Suggests:	php-doctrine-Cache
+Suggests:	php-symfony2-Config
 Suggests:	php-symfony2-HttpFoundation
+Suggests:	php-symfony2-Intl
 Suggests:	php-symfony2-Yaml
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -101,4 +114,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.sv.xlf
 %lang(tr) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.tr.xlf
 %lang(uk) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.uk.xlf
+%lang(vi) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.vi.xlf
 %lang(zh_CN) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.zh_CN.xlf
+%lang(zh_TW) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf
