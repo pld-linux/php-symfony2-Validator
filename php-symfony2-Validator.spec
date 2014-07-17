@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.4.3
+Version:	2.4.4
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	f29cc8980bdb3d2ea3a309f633353cb6
+# Source0-md5:	10ce3c24a339023ac5ce90a8bd8f2684
 URL:		http://symfony.com/doc/2.4/book/validation.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
@@ -112,6 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sr@cyrillic) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.sr_Cyrl.xlf
 %lang(sr@latin) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf
 %lang(sv) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.sv.xlf
+%lang(th) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.th.xlf
 %lang(tr) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.tr.xlf
 %lang(uk) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.uk.xlf
 %lang(vi) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.vi.xlf
