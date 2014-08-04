@@ -3,15 +3,14 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.4.4
+Version:	2.4.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
-Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	10ce3c24a339023ac5ce90a8bd8f2684
+Source0:	https://github.com/symfony/%{pearname}/archive/v%{version}/%{pearname}-%{version}.tar.gz
+# Source0-md5:	9e434b4f5532387a991ca980d0fe0ee3
 URL:		http://symfony.com/doc/2.4/book/validation.html
-BuildRequires:	php-channel(pear.symfony.com)
-BuildRequires:	php-pear-PEAR
+BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
@@ -22,7 +21,6 @@ Requires:	php(mbstring)
 Requires:	php(pcre)
 Requires:	php(simplexml)
 Requires:	php(spl)
-Requires:	php-channel(pear.symfony.com)
 Requires:	php-pear >= 4:1.3.10
 Requires:	php-symfony2-PropertyAccess >= 2.2
 Requires:	php-symfony2-Translation >= 2.0
@@ -42,27 +40,23 @@ PHP or annotations, which can then be checked against instances of
 these classes.
 
 %prep
-%pear_package_setup
+%setup -q -n %{pearname}-%{version}
 
-# no packaging of tests
-mv .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests .
-mv .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist .
-
-# fixups
-mv docs/%{pearname}/Symfony/Component/%{pearname}/* .
+%build
+phpab -n -e '*/Tests/*' -o autoload.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
-%pear_package_install
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}
+cp -a *.php */ $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}
+rm -r $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG.md LICENSE README.md install.log
-%{php_pear_dir}/.registry/.channel.*/*.reg
+%doc CHANGELOG.md LICENSE README.md
 %dir %{php_pear_dir}/Symfony/Component/Validator
 %{php_pear_dir}/Symfony/Component/Validator/*.php
 %{php_pear_dir}/Symfony/Component/Validator/Constraints
