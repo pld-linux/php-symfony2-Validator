@@ -43,7 +43,7 @@ these classes.
 %setup -q -n %{pearname}-%{version}
 
 %build
-phpab -n -e '*/Tests/*' -o autoload.php .
+phpab -n -e '*/Tests/*' -o autoloader.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
