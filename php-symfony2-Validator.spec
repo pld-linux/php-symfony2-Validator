@@ -62,13 +62,18 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{php_pear_dir}/Symfony/Component/Validator
 %{php_pear_dir}/Symfony/Component/Validator/*.php
 %{php_pear_dir}/Symfony/Component/Validator/Constraints
+%{php_pear_dir}/Symfony/Component/Validator/Context
 %{php_pear_dir}/Symfony/Component/Validator/Exception
 %{php_pear_dir}/Symfony/Component/Validator/Mapping
+%{php_pear_dir}/Symfony/Component/Validator/Util
+%{php_pear_dir}/Symfony/Component/Validator/Validator
+%{php_pear_dir}/Symfony/Component/Validator/Violation
+
 %dir %{php_pear_dir}/Symfony/Component/Validator/Resources
 %dir %{php_pear_dir}/Symfony/Component/Validator/Resources/translations
-
 %lang(af) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.af.xlf
 %lang(ar) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.ar.xlf
+%lang(az) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.az.xlf
 %lang(bg) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.bg.xlf
 %lang(ca) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.ca.xlf
 %lang(cs) %{php_pear_dir}/Symfony/Component/Validator/Resources/translations/validators.cs.xlf
