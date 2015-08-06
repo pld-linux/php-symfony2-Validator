@@ -1,15 +1,15 @@
-%define		pearname	Validator
-%define		php_min_version 5.3.3
+%define		package	Validator
+%define		php_min_version 5.3.9
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.4.8
+Version:	2.7.3
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
-Source0:	https://github.com/symfony/%{pearname}/archive/v%{version}/%{pearname}-%{version}.tar.gz
-# Source0-md5:	9e434b4f5532387a991ca980d0fe0ee3
-URL:		http://symfony.com/doc/2.4/book/validation.html
+Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
+# Source0-md5:	e9f258150cfb0e564698e7d40c696be8
+URL:		http://symfony.com/doc/2.7/book/validation.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
@@ -22,13 +22,15 @@ Requires:	php(pcre)
 Requires:	php(simplexml)
 Requires:	php(spl)
 Requires:	php-pear >= 4:1.3.10
-Requires:	php-symfony2-PropertyAccess >= 2.2
-Requires:	php-symfony2-Translation >= 2.0
+Requires:	php-symfony2-Translation >= 2.4
 #Suggests:	php-doctrine-Annotations
 #Suggests:	php-doctrine-Cache
+#Suggests:	php-egulias-EmailValidator
 Suggests:	php-symfony2-Config
+Suggests:	php-symfony2-ExpressionLanguage
 Suggests:	php-symfony2-HttpFoundation
 Suggests:	php-symfony2-Intl
+Suggests:	php-symfony2-PropertyAccess
 Suggests:	php-symfony2-Yaml
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,16 +42,16 @@ PHP or annotations, which can then be checked against instances of
 these classes.
 
 %prep
-%setup -q -n %{pearname}-%{version}
+%setup -q -n %{package}-%{version}
 
 %build
 phpab -n -e '*/Tests/*' -o autoloader.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}
-cp -a *.php */ $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}
-rm -r $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{package}
+cp -a *.php */ $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{package}
+rm -r $RPM_BUILD_ROOT%{php_pear_dir}/Symfony/Component/%{package}/Tests
 
 %clean
 rm -rf $RPM_BUILD_ROOT
