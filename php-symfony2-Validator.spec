@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.7.3
+Version:	2.7.5
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	e9f258150cfb0e564698e7d40c696be8
+# Source0-md5:	df35775ce38505dc4545c6dd67a7a60f
 URL:		http://symfony.com/doc/2.7/book/validation.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -42,7 +42,7 @@ PHP or annotations, which can then be checked against instances of
 these classes.
 
 %prep
-%setup -q -n %{package}-%{version}
+%setup -q -n validator-%{version}
 
 %build
 phpab -n -e '*/Tests/*' -o autoloader.php .
