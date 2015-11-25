@@ -11,7 +11,6 @@ Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{
 # Source0-md5:	a5cccf0cc3745a1a2dedd222b01aeda6
 URL:		http://symfony.com/doc/2.7/book/validation.html
 BuildRequires:	phpab
-BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
 Requires:	php(ctype)
@@ -21,7 +20,6 @@ Requires:	php(mbstring)
 Requires:	php(pcre)
 Requires:	php(simplexml)
 Requires:	php(spl)
-Requires:	php-pear >= 4:1.3.10
 Requires:	php-symfony2-Translation >= 2.4
 #Suggests:	php-doctrine-Annotations
 #Suggests:	php-doctrine-Cache
