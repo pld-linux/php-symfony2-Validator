@@ -20,6 +20,7 @@ Requires:	php(mbstring)
 Requires:	php(pcre)
 Requires:	php(simplexml)
 Requires:	php(spl)
+Requires:	php-dirs >= 1.6
 Requires:	php-symfony2-Translation >= 2.4
 #Suggests:	php-doctrine-Annotations
 #Suggests:	php-doctrine-Cache
