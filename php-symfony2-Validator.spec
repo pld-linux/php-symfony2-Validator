@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.7.7
+Version:	2.7.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	a5cccf0cc3745a1a2dedd222b01aeda6
+# Source0-md5:	4d3ccbf693f23773ffde5b5ebfc067fa
 URL:		http://symfony.com/doc/2.7/book/validation.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
