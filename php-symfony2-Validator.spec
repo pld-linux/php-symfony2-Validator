@@ -1,6 +1,5 @@
 %define		package	Validator
 %define		php_min_version 5.3.9
-%include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
 Version:	2.7.8
