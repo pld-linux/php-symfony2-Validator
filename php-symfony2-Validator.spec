@@ -2,12 +2,12 @@
 %define		php_min_version 5.3.9
 Summary:	Symfony2 Validator Component
 Name:		php-symfony2-Validator
-Version:	2.7.8
+Version:	2.8.52
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	4d3ccbf693f23773ffde5b5ebfc067fa
+# Source0-md5:	55df7096d08e082027f1b2af08e32bba
 URL:		http://symfony.com/doc/2.7/book/validation.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
@@ -96,9 +96,11 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ja) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.ja.xlf
 %lang(lb) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.lb.xlf
 %lang(lt) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.lt.xlf
+%lang(lv) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.lv.xlf
 %lang(mn) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.mn.xlf
 %lang(nb) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.nb.xlf
 %lang(nl) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.nl.xlf
+%lang(nn) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.nn.xlf
 %lang(no) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.no.xlf
 %lang(pl) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.pl.xlf
 %lang(pt) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.pt.xlf
@@ -112,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sr@latin) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf
 %lang(sv) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.sv.xlf
 %lang(th) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.th.xlf
+%lang(tl) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.tl.xlf
 %lang(tr) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.tr.xlf
 %lang(uk) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.uk.xlf
 %lang(vi) %{php_data_dir}/Symfony/Component/Validator/Resources/translations/validators.vi.xlf
